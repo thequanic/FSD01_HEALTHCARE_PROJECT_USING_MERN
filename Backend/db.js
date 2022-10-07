@@ -1,11 +1,12 @@
 const mongoose= require(`mongoose`);
-const mongoURI=`mongodb://localhost:27017/healthcareProject?readPreference=primary&appname=MongoDB%20Compass&ssl=false`;
+const dotenv=require('dotenv').config();
 
 const connectToMongo = ()=>{
-    mongoose.connect(mongoURI,()=>{
+    mongoose.connect(process.env.MongoURI,()=>{
         console.log("Connected to Mongo Successfuly");
     }
-    )
+    ).catch(err=>{
+        console.log("Cannot Connect to Mongo:",err);
+    })
 }
-
 module.exports = connectToMongo;
