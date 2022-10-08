@@ -144,7 +144,7 @@ router.get('/get/Doctor',fetchDoctor,async (req,res)=>
 {
     try{
         doctorId=req.doctor.id;
-        const doctor= await Doctor.findById(doctorId).select("-password");
+        const doctor= await Doctor.findById(doctorId).select("-password -_id");
         res.send(doctor);
     }
     catch(error){
