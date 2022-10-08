@@ -1,6 +1,6 @@
 const jwt = require(`jsonwebtoken`);
 const dotenv=require(`dotenv`).config();
-
+const JWT=`IamProudtobeanIndian`
 
 
 const fetchDoctor = (req,res,next)=>
@@ -14,7 +14,7 @@ const fetchDoctor = (req,res,next)=>
     }
 
     try{
-        const data= jwt.verify(token,process.env.JWT);
+        const data= jwt.verify(token,JWT);
         req.doctor=data.doctor;
         next();
     }catch(error)

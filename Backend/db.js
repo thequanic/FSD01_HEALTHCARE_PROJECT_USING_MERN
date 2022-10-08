@@ -1,8 +1,8 @@
 const mongoose= require(`mongoose`);
 const dotenv=require('dotenv').config();
-
-const connectToMongo = ()=>{
-    mongoose.connect(process.env.MongoURI,()=>{
+//process.env.MongoURI
+const connectToMongo = async ()=>{
+    await mongoose.connect(`mongodb://localhost:27017/healthcareProject?readPreference=primary&appname=MongoDB%20Compass&ssl=false`).then(()=>{
         console.log("Connected to Mongo Successfuly");
     }
     ).catch(err=>{

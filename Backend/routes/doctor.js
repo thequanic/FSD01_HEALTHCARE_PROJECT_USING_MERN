@@ -6,7 +6,7 @@ const bcrypt= require(`bcryptjs`);
 const jwt = require(`jsonwebtoken`);
 const fetchDoctor=require(`../middleware/fetchDoctor`);
 const dotenv=require(`dotenv`).config();
-
+const  JWT=`IamProudtobeanIndian`;
 
 /*********************************************************************************************************************** */
 //create a Doctor using: POST "/api/auth/create/Doctor"
@@ -65,7 +65,7 @@ router.post('/create/Doctor',[
             };
 
             //jwt token that will provide secure access to doctor
-            const authToken=jwt.sign(data,process.env.JWT);
+            const authToken=jwt.sign(data,JWT);
             success=true;
             //console.log(authToken);
             res.json({success,authToken});}
@@ -120,7 +120,7 @@ router.post('/login/Doctor',[
         };
 
         //jwt token that will provide secure access to doctor
-        const authToken=jwt.sign(data,process.env.JWT);
+        const authToken=jwt.sign(data,JWT);
         success=true;
         //console.log(authToken);
         res.json({success,authToken});
