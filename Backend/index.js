@@ -16,6 +16,7 @@ app.use(express.json());
 
  app.use(`/api/auth/doc`,require(`./routes/doctor.js`));
  app.use(`/api/auth/pat`,require(`./routes/patient.js`));
+ app.use('/api/service',require('./routes/others.js'))
 
 app.get('/',(req,res)=>{
     res.send("Hello World");
