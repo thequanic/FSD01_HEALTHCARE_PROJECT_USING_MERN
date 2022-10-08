@@ -21,5 +21,20 @@ router.get('/get/all/Doctor',async (req,res)=>
 })
 /*********************************************************************************************************************** */
 
+/*********************************************************************************************************************** */
+//get a Doctor using: GET "/api/auth/get/Doctor"
+// router.post('/get/all/Doctor',async (req,res)=>
+// {
+//     try{
+//         const doctor= await Doctor.find().select("-password -_id");
+//         res.send(doctor);
+//     }
+//     catch(error){
+//         console.log(error.message);
+//         res.status(500).send("Internal Server Error");
+//     }
+// })
+/*********************************************************************************************************************** */
+
 
 module.exports=router;
