@@ -15,6 +15,7 @@ import State from './Context/State';
 // import ViewPage from "./Components/ViewPage";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
+import Doctors from "./Components/Doctors";
 
 
 
@@ -36,7 +37,7 @@ function App() {
             <Route path="/signup" element ={<Signup/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/about" element={<About/>} />
-            
+            <Route path="/doctors" element={<Doctors/>} />
           </Route>
         </Routes>
      

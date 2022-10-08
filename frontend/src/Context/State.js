@@ -38,11 +38,26 @@ const State = (props)=>{
         const json= await response.json();
         setUserDetail(json);
     }
-        //console.log(json);
+    
+    const [doctors,setDoctors]=useState([]);
+    const fetchDoctors=async ()=>{
+        
+        const response= await fetch(`http://${host}/api/service/get/all/Doctor`,
+        {
+            method:'GET',
+            headers:{
+                'Content-Type':'application/json',
+            },
+            
+        });
+        const json= await response.json();
+        setDoctors(json);
+    }
 
 
 
-    const [view,setView]=useState({title:"",description:"Error:404 Not Found..\nEither you are not authorize to view this page\nOr you must have reloaded it\nTry by going back home and reviewing this page",tag:"",date:"",index:-1});
+
+    const [view,setView]=useState({name:"",expertise:"",about:"Error:404 Not Found..\nEither you are not authorize to view this page\nOr you must have reloaded it\nTry by going back home and reviewing this page",highestEducation:"",email:"",index:-1});
 
     const[alert,setAlert]= useState(null);
     
@@ -62,7 +77,7 @@ const State = (props)=>{
     
 
     return (
-        <Context.Provider value={{view,setView,alert,showAlert,user,setUser,fetchDoctorDetail,fetchPatientDetail,userDetail,setUserDetail}}>
+        <Context.Provider value={{view,setView,alert,showAlert,user,setUser,fetchDoctorDetail,fetchPatientDetail,userDetail,setUserDetail,doctors,setDoctors,fetchDoctors}}>
             {props.children}
         </Context.Provider>
     )

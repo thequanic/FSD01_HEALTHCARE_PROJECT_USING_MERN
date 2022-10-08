@@ -208,6 +208,51 @@ body{
   
 }
 
+.DoctorCard
+{
+  display: block;
+  background-color: burlywood;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width:100%;
+  border-color: black;
+  border-style: ridge;
+  border-width: 2px;
+  height: 70px;
+}
+
+.DoctorCard-Info
+{
+  display: inline-block;
+  font-size: 20px;
+  float:left;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.DoctorCard-Btn
+{
+  display: inline-block;
+  font-size: 20px;
+  float:right;
+  margin-right: 10px;
+  margin-top: 15px;
+  background-color: rgb(85, 208, 232);
+  font-weight: bolder;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  width:150px;
+  
+}
+
+.DoctorCard-Btn:hover
+{
+  transform:translate3d(-10px,0px,15px)
+}
+
+
 
 @media only screen and (max-width: 1000px) {
   body {
@@ -252,6 +297,54 @@ body{
   float:right;
 }
 
+
+
+.DoctorCard
+{
+  display: block;
+  background-color: rgb(37, 191, 147);
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width:100%;
+  border-color: black;
+  border-style: ridge;
+  border-width: 2px;
+  height: 100px;
+}
+
+.DoctorCard-Info
+{
+  display: inline-block;
+  font-size: 17px;
+  float:left;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.DoctorCard-Btn
+{
+  display: inline-block;
+  font-size: 17px;
+  float:right;
+  margin-right: 10px;
+  margin-top: 15px;
+  background-color: rgb(211, 111, 248);
+  font-weight: bolder;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  width:100px;
+  
+}
+
+.DoctorCard-Btn:hover
+{
+  transform:translate3d(-10px,0px,15px)
+}
+
+
+
 }
 
 
@@ -288,5 +381,51 @@ body{
 {
   width: 100%;
 }
+.DoctorCard
+{
+  display: block;
+  background-color: rgb(37, 191, 147);
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width:100%;
+  border-color: black;
+  border-style: ridge;
+  border-width: 2px;
+  height: 120px;
+}
+
+.DoctorCard-Info
+{
+  display: inline-block;
+  font-size: 15px;
+  float:left;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.DoctorCard-Btn
+{
+  display: inline-block;
+  font-size: 15px;
+  float:right;
+  margin-right: 10px;
+  margin-top: 15px;
+  background-color: rgb(211, 111, 248);
+  font-weight: bolder;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  width:100[x]
+  
+}
+
+.DoctorCard-Btn:hover
+{
+  transform:translate3d(-10px,0px,15px)
+}
 
 }
+
+
+

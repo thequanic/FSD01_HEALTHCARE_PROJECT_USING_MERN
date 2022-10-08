@@ -8,7 +8,7 @@ export default function NavBar()
 {
 
   const context=useContext(Context);
-  const {showAlert} = context;
+  const {showAlert,user} = context;
 
 
   let location = useLocation();
@@ -51,6 +51,13 @@ export default function NavBar()
         <li className="nav-item">
           <Link className={`nav-link ${location.pathname==="/about"?"active":""}`} to="/about">About</Link>
         </li>
+        {
+            user==="patient"?
+            <li className="nav-item">
+            <Link className={`nav-link ${location.pathname==="/doctors"?"active":""}`} to="/doctors">Doctors</Link>
+            </li>:
+            <></>
+        }
         </ul> 
         
         
